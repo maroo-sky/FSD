@@ -1,4 +1,4 @@
-# Knowledge Distillation by Transferring Intra-and Inter-Feature Structure in Transformer
+# FSD: Feature Structure Distillation
 
 ## Installaiton
 
