@@ -1,11 +1,17 @@
 # Knowledge Distillation by Transferring Intra-and Inter-Feature Structure in Transformer
 
 ##Installaiton
+
 #####Create virture environment
+
     conda create -n "ENV_NAME" numpy=1.18.1 pandas=1.0.1 scikit-learn=0.22.1 pytorch=1.4.0 tqdm=4.42.1 python=3.7.6 matplotlib=3.1.3 
+
 #####After creating virture environment download belows
+    
     pip install transformers==2.6.0 tensorboard==2.2.1
+
 #####Then, change the sentencepiece library version
+    
     pip install sentencepiece==0.1.91
 
 ##Training
@@ -22,12 +28,12 @@ FSD_{ILG}: L = L_{KD} + L_{ILG}
 
 Pleas see our paper for more details.
 
-###Dataset
+##Dataset
 
 We contuct on the GLUE benchmark and download in [GLUE official page](https://gluebenchmark.com/tasks)
 
 
-###Fine-tuing Teacher model
+##Fine-tuing Teacher model
 
 Follow [Hugging Face](https://huggingface.co/transformers/v2.6.0/examples.html) to fine-tuning on GLUE benchmark.
  
@@ -72,6 +78,7 @@ Output directory must be followed under formation
     optional to train methods
     #--copy_teacher: copy fine-tuned teacher model parameters
     #--internal: do Intra-Feature Distillation
+
 **Global Inter-Feature Distillation Method (FSD_G)**
     
     DATA_DIR = /{path_of_data}/
@@ -141,6 +148,7 @@ Output directory must be followed under formation
     
     optional to train with outher methods
     gamma_g = 0.0 for FSD_{IL}
+
 ###Train Teacher Memory
 
 **Global Inter-Feature Distillation**
