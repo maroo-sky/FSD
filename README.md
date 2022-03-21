@@ -33,7 +33,7 @@ Pleas see our paper for more details.
 We contuct on the GLUE benchmark and download in [GLUE official page](https://gluebenchmark.com/tasks)
 
 
-##Fine-tuing Teacher model
+## Fine-tuing Teacher model
 
 Follow [Hugging Face](https://huggingface.co/transformers/v2.6.0/examples.html) to fine-tuning on GLUE benchmark.
  
