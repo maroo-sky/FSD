@@ -46,14 +46,16 @@ we use "bert-base-uncased" and different learning rate, we present in our paper
 ### Feature Strucuture Distillation
 
 **Intra-and Local Inter-Feature Distillation Method (FSD_I & FSD_L)**
-
+    
+run "glue_with_cka_l.py" for CKA_{inter}. without "--internal"
+    
     DATA_DIR = /{path_of_data}/
     OUTPUT_DIR=/{path_of_fine-tuned_model}/bert-base-uncased #be a student model
     MODEL_PATH = /{path_of_fine-tuned_teacher_model}/bert-base-uncased # teacher model
     RUN_FILE_PATH = /{path_for_tensorboard_fun_file}/
     TASK_NAME = glue_task
 
-    python run_glue_intra_inter.py --model_type bert \
+    python glue_with_cka_i.py --model_type bert \
     --model_name_or_path MODEL_PATH  \
     --model_name_or_path_for_copy bert-base-uncased \
     --data_dir DATA_DIR \
@@ -88,7 +90,7 @@ we use "bert-base-uncased" and different learning rate, we present in our paper
     TASK_NAME = glue_task
     MEMORY_PATH = /{path_of_trained_memory}/
     
-    python run_glue_global.py --model_type bert 
+    python glue_with_cka_g.py --model_type bert 
     --model_name_or_path MODEL_PATH  
     --model_name_or_path_for_copy bert-base-uncased 
     --data_dir DATA_DIR 
@@ -121,7 +123,7 @@ we use "bert-base-uncased" and different learning rate, we present in our paper
     TASK_NAME = glue_task
     MEMORY_PATH = /{path_of_trained_memory}/
     
-    python run_glue_all.py --model_type bert 
+    python glue_with_cka_ilg.py --model_type bert 
     --model_name_or_path MODEL_PATH  
     --model_name_or_path_for_copy bert-base-uncased 
     --data_dir DATA_DIR 
@@ -152,6 +154,7 @@ we use "bert-base-uncased" and different learning rate, we present in our paper
 ### Train Teacher Memory
 
 **Global Inter-Feature Distillation**
+
 num_centroid is 300 on MNLI, QQP dataset, except it is 100.
 
     DATA_DIR = /{path_of_data}/
