@@ -64,7 +64,7 @@ from transformers import glue_compute_metrics as compute_metrics
 from dataLoader.glue import glue_convert_examples_to_features as convert_examples_to_features
 from dataLoader.glue import glue_output_modes as output_modes
 from dataLoader.glue import glue_processors as processors
-
+from model.memory import Memory
 #add libraries
 import pdb
 import collections
@@ -305,10 +305,9 @@ def train(args, train_dataset, teacher, teacher_mem, student, tokenizer):
             #tea_memory_dist_structure = cdist2(teacher_memory, teacher_memory)
             #stu_memory_cos_structure = torch.mm(norm_stu_memory, norm_stu_memory.transpose(-1, -2))
             #tea_memory_cos_structure = torch.mm(norm_tea_memory, norm_tea_memory.transpose(-1, -2))
-            tea_dist_structure = cdist2(teacher_feature, teacher_memory)
+            tea_dist_structure = cdist2(teacher_feature, teacher_memory).squeeze()
             tea_cos_structure = torch.mm(norm_teacher_feature ,norm_tea_memory.transpose(-1,-2))
             stu_dist_structure, stu_cos_structure = student_outputs[4], student_outputs[5]
-
             #memory_dist_loss = l2_loss(stu_memory_dist_structure, tea_memory_dist_structure)
             #memory_cos_loss = l2_loss(stu_memory_cos_structure, tea_memory_cos_structure)
             memory_cka_loss = linear_CKA_loss(student_memory, teacher_memory, args)
@@ -1006,7 +1005,6 @@ def main():
         )
     else:
         student_model = student_class.from_pretrained(config=student_config)
-
     teacher_memory = torch.load(args.teacher_memory_path)
 
     if args.local_rank == 0:

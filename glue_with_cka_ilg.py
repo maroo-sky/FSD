@@ -865,7 +865,7 @@ def main():
                         )
     parser.add_argument("--copy_teacher", action="store_true", help="Copy teacher's layers parameter")
     parser.add_argument("--validation", action="store_true", help="Devide train and validation dataset")
-    #parser.add_argument("--run_file", type=str, required=True, help="create tensorboard run files")
+    parser.add_argument("--run_file", type=str, required=False, help="create tensorboard run files")
 
     parser.add_argument("--permutation", type=float, default=0.3, help="ratio of train dataset to valid dataset")
     parser.add_argument("--alpha", type=float, nargs='*', default=[0.0], help="range of alpha for grid search")

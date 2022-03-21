@@ -39,7 +39,7 @@ Follow [Hugging Face](https://huggingface.co/transformers/v2.6.0/examples.html) 
  
 we use "bert-base-uncased" and different learning rate, we present in our paper 
 
-Output directory must be followed under formation
+**Output directory must be followed under formation**
     
     output_dir=/your/path/to/bert-base-uncased
 
@@ -152,12 +152,14 @@ Output directory must be followed under formation
 ### Train Teacher Memory
 
 **Global Inter-Feature Distillation**
+num_centroid is 300 on MNLI, QQP dataset, except it is 100.
 
     DATA_DIR = /{path_of_data}/
     OUTPUT_DIR=/{path_of_fine-tuned_model}/bert-base-uncased #be a student model
     MODEL_PATH = /{path_of_fine-tuned_teacher_model}/bert-base-uncased # teacher model
     RUN_FILE_PATH = /{path_for_tensorboard_fun_file}/
-    TASK_NAME = glue_task
+    TASK_NAME = glue_task upper case (ex: WNLI)
+    task = glue_task lower case (ex: wnli)
     
     python train_memory.py --model_type bert \
     --model_name_or_path MODEL_PATH  \
@@ -168,13 +170,13 @@ Output directory must be followed under formation
     --do_train \
     --logging_steps 500000 \
     --save_steps 500000 \
-    --run_file RUN_FILE_PATH \
     --num_train_epochs 3 \
     --memory_num_train_epochs 3 \
     --task_name TASK_NAME \
     --do_lower_case \
     --num_centroid 100 \
-    
+    --memory_learning_rate \
+    --task_name $task
 
 
     
