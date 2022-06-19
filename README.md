@@ -1,4 +1,22 @@
 # FSD: Feature Structure Distillation
+This work has been submitted to the IEEE for possible publication. IEEE Transitions of Neural Networks and Learning Systems (TNNLS)
+
+## Abstract
+Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. 
+A challenge of this approach is to reduce the flexibility of the student's representations inducing inaccurate learning of the teacher's knowledge. 
+To resolve it in BERT transferring, we investigate distillation of structures of representations specified to three types: intra-feature, 
+local inter-feature, global inter-feature structures. 
+To transfer them, we introduce *feature structure distillation* methods based on the Centered Kernel Alignment, 
+which assigns a consistent value to similar features structures and reveals more informative relations. 
+In particular, a memory-augmented transfer method with clustering is implemented for the global structures. 
+In the experiments on the nine tasks for language understanding of the GLUE dataset, 
+the proposed methods effectively transfer the three types of structures and improve performance compared to state-of-the-art distillation methods. 
+Indeed, the code for the methods is available in this https URL.
+
+## Overview
+
+<img height="600" src="./src/figures/intra-and%20local%20inter-feature.png" width="350"/>
+<img src="./src/figures/global%20structure.png" width="500" height="600">
 
 ## Installaiton
 
@@ -180,6 +198,22 @@ num_centroid is 300 on MNLI, QQP dataset, except it is 100.
     --num_centroid 100 \
     --memory_learning_rate \
     --task_name $task
+
+### Pre-print version
+[https://arxiv.org/abs/2204.08922](https://arxiv.org/abs/2204.08922)
+
+### Reference (Bitex format)
+    @misc{https://doi.org/10.48550/arxiv.2204.08922,
+      doi = {10.48550/ARXIV.2204.08922},
+      url = {https://arxiv.org/abs/2204.08922},
+      author = {Jung, Hee-Jun and Kim, Doyeon and Na, Seung-Hoon and Kim, Kangil},
+      keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+      title = {Feature Structure Distillation for BERT Transferring},
+      publisher = {arXiv},
+      year = {2022},
+      copyright = {Creative Commons Attribution 4.0 International}
+    }
+
 
 
     
