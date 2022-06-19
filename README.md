@@ -1,4 +1,4 @@
-# FSD: Feature Structure Distillation
+# Feature Structure Distillation for BERT Transferring
 This work has been submitted to the IEEE for possible publication. IEEE Transitions of Neural Networks and Learning Systems (TNNLS)
 
 ## Abstract
