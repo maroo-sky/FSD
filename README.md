@@ -15,7 +15,7 @@ Indeed, the code for the methods is available in this https URL.
 
 ## Overview
 
-<img src="./src/figures/intra-and%20local%20inter-feature.png" width=350" height="600" /> <img src="./src/figures/global%20structure.png" width="450" height="600" />
+<img src="./src/figures/intra-and%20local%20inter-feature.png" width="350" height="600" /> <img src="./src/figures/global%20structure.png" width="450" height="600" />
 
 ## Installaiton
 
