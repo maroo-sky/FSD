@@ -30,6 +30,14 @@ Indeed, the code for the methods is available in this https URL.
 ##### Then, change the sentencepiece library version
     
     pip install sentencepiece==0.1.91
+    
+##### If you got under ERROR message
+
+    if this call came from a _pb2.py file your generated code is out of date and must be regenerated with protoc >-3.19.0.
+
+##### Following under commend
+
+    pip install protobuf==3.20.*
 
 ## Training
 
