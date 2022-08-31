@@ -211,15 +211,23 @@ num_centroid is 300 on MNLI, QQP dataset, except it is 100.
 
 ### Reference (Bitex format)
     @misc{https://doi.org/10.48550/arxiv.2204.08922,
-      doi = {10.48550/ARXIV.2204.08922},
-      url = {https://arxiv.org/abs/2204.08922},
-      author = {Jung, Hee-Jun and Kim, Doyeon and Na, Seung-Hoon and Kim, Kangil},
-      keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
-      title = {Feature Structure Distillation for BERT Transferring},
-      publisher = {arXiv},
-      year = {2022},
-      copyright = {Creative Commons Attribution 4.0 International}
-    }
+  doi = {10.48550/ARXIV.2204.08922},
+  
+  url = {https://arxiv.org/abs/2204.08922},
+  
+  author = {Jung, Hee-Jun and Kim, Doyeon and Na, Seung-Hoon and Kim, Kangil},
+  
+  keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Feature Structure Distillation with Centered Kernel Alignment in BERT Transferring},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+
 
 
 
