@@ -1,5 +1,5 @@
 # Feature Structure Distillation with Centered Kernel Alignment for BERT Transferring
-Expert Systems with Applications (accept)
+**ELSEVIER Expert Systems with Applications (accepted paper)**
 
 ## Abstract
 Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. A challenge of this approach is to reduce the flexibility of the student’s representations inducing inaccurate learning of the teacher’s knowledge. To resolve the problems, we propose a novel method feature structure distillation that elaborates information on structures of features into three types for transferring, and implements them based on Centered Kernel Analysis. In particular, the global local-inter structure is proposed to transfer the structure beyond the mini-batch. In detail, the method first divides the feature information into three structures: intra-feature, local inter-feature, and global inter-feature structures to subdivide the structure and transfer the diversity of the structure. Then, we adopt CKA which shows a more accurate similarity metric compared to other metrics between two different models or representations on different spaces. In particular, a memory-augmented transfer method with clustering is implemented for the global structures. The methods are empirically analyzed on the nine tasks for language understanding of the GLUE dataset with Bidirectional Encoder Representations from Transformers (BERT), which is a representative neural language model. In the results, the proposed methods effectively transfer the three types of structures and improves performance compared to state-of-the-art distillation methods: (i.e.) ours achieve 66.61% accuracy compared to the baseline (65.55%) in the RTE dataset. Indeed, the code for the methods is available at https://github.com/maroo-sky/FSD.
@@ -10,11 +10,11 @@ Knowledge distillation is an approach to transfer information on representations
 
 ## Installaiton
 
-##### Create virture environment
+##### Create virtual environment
 
     conda create -n "ENV_NAME" numpy=1.18.1 pandas=1.0.1 scikit-learn=0.22.1 pytorch=1.4.0 tqdm=4.42.1 python=3.7.6 matplotlib=3.1.3 
 
-##### After creating virture environment download belows
+##### After creating virtual environment download belows
     
     pip install transformers==2.6.0 tensorboard==2.2.1
 
@@ -26,7 +26,7 @@ Knowledge distillation is an approach to transfer information on representations
 
     if this call came from a _pb2.py file your generated code is out of date and must be regenerated with protoc >-3.19.0.
 
-##### Following under commend
+##### Following under command
 
     pip install protobuf==3.20.*
 
@@ -42,14 +42,14 @@ FSD_G: L = L_{KD} + L_{G}
 
 FSD_{ILG}: L = L_{KD} + L_{ILG}
 
-Pleas see our paper for more details.
+Please see our paper for more details.
 
 ## Dataset
 
-We contuct on the GLUE benchmark and download in [GLUE official page](https://gluebenchmark.com/tasks)
+We conduct on the GLUE benchmark and download in [GLUE official page](https://gluebenchmark.com/tasks)
 
 
-## Fine-tuing Teacher model
+## Fine-tuning Teacher model
 
 Follow [Hugging Face](https://huggingface.co/transformers/v2.6.0/examples.html) to fine-tuning on GLUE benchmark.
  
@@ -59,7 +59,7 @@ we use "bert-base-uncased" and different learning rate, we present in our paper
     
     output_dir=/your/path/to/bert-base-uncased
 
-### Feature Strucuture Distillation
+### Feature Structure Distillation
 
 **Intra-and Local Inter-Feature Distillation Method (FSD_I & FSD_L)**
     
@@ -202,17 +202,17 @@ num_centroid is 300 on MNLI, QQP dataset, except it is 100.
 
 ### Reference (Bitex format)
     @article{JUNG2023120980,
-title = {Feature structure distillation with Centered Kernel Alignment in BERT transferring},
-journal = {Expert Systems with Applications},
-pages = {120980},
-year = {2023},
-issn = {0957-4174},
-doi = {https://doi.org/10.1016/j.eswa.2023.120980},
-url = {https://www.sciencedirect.com/science/article/pii/S0957417423014823},
-author = {Hee-Jun Jung and Doyeon Kim and Seung-Hoon Na and Kangil Kim},
-keywords = {Knowledge distillation, BERT, Centered Kernel Alignment, Natural language processing},
-abstract = {Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. A challenge of this approach is to reduce the flexibility of the student’s representations inducing inaccurate learning of the teacher’s knowledge. To resolve the problems, we propose a novel method feature structure distillation that elaborates information on structures of features into three types for transferring, and implements them based on Centered Kernel Analysis. In particular, the global local-inter structure is proposed to transfer the structure beyond the mini-batch. In detail, the method first divides the feature information into three structures: intra-feature, local inter-feature, and global inter-feature structures to subdivide the structure and transfer the diversity of the structure. Then, we adopt CKA which shows a more accurate similarity metric compared to other metrics between two different models or representations on different spaces. In particular, a memory-augmented transfer method with clustering is implemented for the global structures. The methods are empirically analyzed on the nine tasks for language understanding of the GLUE dataset with Bidirectional Encoder Representations from Transformers (BERT), which is a representative neural language model. In the results, the proposed methods effectively transfer the three types of structures and improves performance compared to state-of-the-art distillation methods: (i.e.) ours achieve 66.61% accuracy compared to the baseline (65.55%) in the RTE dataset. Indeed, the code for the methods is available at https://github.com/maroo-sky/FSD.}
-}
+    title = {Feature structure distillation with Centered Kernel Alignment in BERT transferring},
+    journal = {Expert Systems with Applications},
+    pages = {120980},
+    year = {2023},
+    issn = {0957-4174},
+    doi = {https://doi.org/10.1016/j.eswa.2023.120980},
+    url = {https://www.sciencedirect.com/science/article/pii/S0957417423014823},
+    author = {Hee-Jun Jung and Doyeon Kim and Seung-Hoon Na and Kangil Kim},
+    keywords = {Knowledge distillation, BERT, Centered Kernel Alignment, Natural language processing},
+    abstract = {Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. A challenge of this approach is to reduce the flexibility of the student’s representations inducing inaccurate learning of the teacher’s knowledge. To resolve the problems, we propose a novel method feature structure distillation that elaborates information on structures of features into three types for transferring, and implements them based on Centered Kernel Analysis. In particular, the global local-inter structure is proposed to transfer the structure beyond the mini-batch. In detail, the method first divides the feature information into three structures: intra-feature, local inter-feature, and global inter-feature structures to subdivide the structure and transfer the diversity of the structure. Then, we adopt CKA which shows a more accurate similarity metric compared to other metrics between two different models or representations on different spaces. In particular, a memory-augmented transfer method with clustering is implemented for the global structures. The methods are empirically analyzed on the nine tasks for language understanding of the GLUE dataset with Bidirectional Encoder Representations from Transformers (BERT), which is a representative neural language model. In the results, the proposed methods effectively transfer the three types of structures and improves performance compared to state-of-the-art distillation methods: (i.e.) ours achieve 66.61% accuracy compared to the baseline (65.55%) in the RTE dataset. Indeed, the code for the methods is available at https://github.com/maroo-sky/FSD.}
+    }
 
 
 
