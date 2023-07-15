@@ -1,17 +1,8 @@
-# Feature Structure Distillation for BERT Transferring
-This work has been submitted to the IEEE for possible publication. IEEE Transitions of Neural Networks and Learning Systems (TNNLS)
+# Feature Structure Distillation with Centered Kernel Alignment for BERT Transferring
+Expert Systems with Applications (accept)
 
 ## Abstract
-Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. 
-A challenge of this approach is to reduce the flexibility of the student's representations inducing inaccurate learning of the teacher's knowledge. 
-To resolve it in BERT transferring, we investigate distillation of structures of representations specified to three types: intra-feature, 
-local inter-feature, global inter-feature structures. 
-To transfer them, we introduce *feature structure distillation* methods based on the Centered Kernel Alignment, 
-which assigns a consistent value to similar features structures and reveals more informative relations. 
-In particular, a memory-augmented transfer method with clustering is implemented for the global structures. 
-In the experiments on the nine tasks for language understanding of the GLUE dataset, 
-the proposed methods effectively transfer the three types of structures and improve performance compared to state-of-the-art distillation methods. 
-Indeed, the code for the methods is available in this https URL.
+Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. A challenge of this approach is to reduce the flexibility of the student’s representations inducing inaccurate learning of the teacher’s knowledge. To resolve the problems, we propose a novel method feature structure distillation that elaborates information on structures of features into three types for transferring, and implements them based on Centered Kernel Analysis. In particular, the global local-inter structure is proposed to transfer the structure beyond the mini-batch. In detail, the method first divides the feature information into three structures: intra-feature, local inter-feature, and global inter-feature structures to subdivide the structure and transfer the diversity of the structure. Then, we adopt CKA which shows a more accurate similarity metric compared to other metrics between two different models or representations on different spaces. In particular, a memory-augmented transfer method with clustering is implemented for the global structures. The methods are empirically analyzed on the nine tasks for language understanding of the GLUE dataset with Bidirectional Encoder Representations from Transformers (BERT), which is a representative neural language model. In the results, the proposed methods effectively transfer the three types of structures and improves performance compared to state-of-the-art distillation methods: (i.e.) ours achieve 66.61% accuracy compared to the baseline (65.55%) in the RTE dataset. Indeed, the code for the methods is available at https://github.com/maroo-sky/FSD.
 
 ## Overview
 
@@ -206,20 +197,22 @@ num_centroid is 300 on MNLI, QQP dataset, except it is 100.
     --memory_learning_rate \
     --task_name $task
 
-### Pre-print version
-[https://arxiv.org/abs/2204.08922](https://arxiv.org/abs/2204.08922)
+### Articles in press
+[https://www.sciencedirect.com/science/article/pii/S0957417423014823](https://www.sciencedirect.com/science/article/pii/S0957417423014823)
 
 ### Reference (Bitex format)
-    @misc{https://doi.org/10.48550/arxiv.2204.08922,
-    doi = {10.48550/ARXIV.2204.08922},
-    url = {https://arxiv.org/abs/2204.08922},
-    author = {Jung, Hee-Jun and Kim, Doyeon and Na, Seung-Hoon and Kim, Kangil},
-    keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
-    title = {Feature Structure Distillation with Centered Kernel Alignment in BERT Transferring},
-    publisher = {arXiv},
-    year = {2022},
-    copyright = {Creative Commons Attribution 4.0 International}
-    }
+    @article{JUNG2023120980,
+title = {Feature structure distillation with Centered Kernel Alignment in BERT transferring},
+journal = {Expert Systems with Applications},
+pages = {120980},
+year = {2023},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2023.120980},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417423014823},
+author = {Hee-Jun Jung and Doyeon Kim and Seung-Hoon Na and Kangil Kim},
+keywords = {Knowledge distillation, BERT, Centered Kernel Alignment, Natural language processing},
+abstract = {Knowledge distillation is an approach to transfer information on representations from a teacher to a student by reducing their difference. A challenge of this approach is to reduce the flexibility of the student’s representations inducing inaccurate learning of the teacher’s knowledge. To resolve the problems, we propose a novel method feature structure distillation that elaborates information on structures of features into three types for transferring, and implements them based on Centered Kernel Analysis. In particular, the global local-inter structure is proposed to transfer the structure beyond the mini-batch. In detail, the method first divides the feature information into three structures: intra-feature, local inter-feature, and global inter-feature structures to subdivide the structure and transfer the diversity of the structure. Then, we adopt CKA which shows a more accurate similarity metric compared to other metrics between two different models or representations on different spaces. In particular, a memory-augmented transfer method with clustering is implemented for the global structures. The methods are empirically analyzed on the nine tasks for language understanding of the GLUE dataset with Bidirectional Encoder Representations from Transformers (BERT), which is a representative neural language model. In the results, the proposed methods effectively transfer the three types of structures and improves performance compared to state-of-the-art distillation methods: (i.e.) ours achieve 66.61% accuracy compared to the baseline (65.55%) in the RTE dataset. Indeed, the code for the methods is available at https://github.com/maroo-sky/FSD.}
+}
 
 
 
