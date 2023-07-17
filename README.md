@@ -198,7 +198,7 @@ num_centroid is 300 on MNLI, QQP dataset, except it is 100.
     --task_name $task
 
 ### Articles in press
-[https://www.sciencedirect.com/science/article/pii/S0957417423014823](https://www.sciencedirect.com/science/article/pii/S0957417423014823)
+[https://doi.org/10.1016/j.eswa.2023.120980](https://doi.org/10.1016/j.eswa.2023.120980)
 
 ### Reference (Bitex format)
     @article{JUNG2023120980,
